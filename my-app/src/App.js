@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import HeroSection from './components/heroSection';
+import NavigationBar from './components/navigation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import SpecialsSection from './components/specialSection';
+import TestimonialsSection from './components/testimonials';
+import LittleLemonDescription from './components/about';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <NavigationBar/>
+      <HeroSection/>
+      <SpecialsSection/>
+      <TestimonialsSection/>
+    </main>
   );
 }
 
