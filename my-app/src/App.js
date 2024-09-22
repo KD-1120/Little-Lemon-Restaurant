@@ -1,24 +1,23 @@
 import './App.css';
-import HeroSection from './components/heroSection';
 import NavigationBar from './components/navigation';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SpecialsSection from './components/specialSection';
-import TestimonialsSection from './components/testimonials';
-import {About} from './components/about';
-import CTA from './components/cta';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer';
+import Home from './pages/home';
+import Reservations from './pages/reservations';
 
 function App() {
   return (
-    <main className="App">
-      <NavigationBar/>
-      <HeroSection/>
-      <SpecialsSection/>
-      <TestimonialsSection/>
-      <About/>
-      <CTA/>
-      <Footer/>
-    </main>
+    <Router>
+      <NavigationBar />
+      <main>
+        <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/reservations" element={<Reservations/>} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
 }
 
